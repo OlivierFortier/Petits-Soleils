@@ -1,19 +1,19 @@
 <template>
   <div
-    class="contenuCarte"
     v-bind:class="{ contenuMedia: $route.name == 'Médias' }"
+    class="contenuCarte"
   >
-    <h1 class="titreCard" v-if="titreCard != null || ''" v-bind="titreCard">
+    <h1 v-bind="titreCard" v-if="titreCard != null || ''" class="titreCard">
       {{ titreCard }}
     </h1>
     <div
-      class="interieur"
       v-bind:class="{ rowContact: $route.name == 'Contact' }"
+      class="interieur"
     >
       <div
-        class="texte"
         v-bind:class="{ texteContact: $route.name == 'Contact' }"
         v-if="texteCard != null || ''"
+        class="texte"
       >
         <p v-for="texte in texteCard" :key="texte">{{ texte }}</p>
       </div>
@@ -26,8 +26,15 @@
 export default {
   name: 'CardContenu',
   props: {
-    titreCard: String,
-    texteCard: Array || null
+    titreCard: {
+      type: String,
+      default: 'Erreur'
+    },
+    texteCard: {
+      type: Array,
+      required: false,
+      default: () => ['Erreur']
+    }
   }
 }
 </script>

@@ -14,8 +14,10 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^3.0.0-0",
+    "normalize.css": "^8.0.1",
     "nuxt": "^2.0.0",
-    "vue-carousel": "^0.18.0"
+    "vue-carousel": "^0.18.0",
+    "vue-sticky-directive": "0.0.10"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",
