@@ -3,7 +3,11 @@
     v-bind:class="{ contenuMedia: $route.name == 'Médias' }"
     class="contenuCarte"
   >
-    <h1 v-bind="titreCard" v-if="titreCard != null || ''" class="titreCard">
+    <h1
+      v-bind:titreCard="titreCard"
+      v-if="titreCard != null || ''"
+      class="titreCard"
+    >
       {{ titreCard }}
     </h1>
     <div
