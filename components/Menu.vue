@@ -12,7 +12,7 @@
     </div>
     <div v-on:click="ouvrirMenu()" class="menu-bouton">
       <font-awesome-icon v-if="!active" :icon="['fas', 'bars']" />
-      <font-awesome-icon v-if="active" :icon="window - close" />
+      <font-awesome-icon v-if="active" :icon="['fas', 'window-close']" />
     </div>
     <transition name="ouvrir">
       <div v-if="active" class="navigation">
