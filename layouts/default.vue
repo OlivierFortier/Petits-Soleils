@@ -2,8 +2,8 @@
   <div id="app">
     <Menu v-sticky class="barre-menu" />
     <transition name="affichePage" mode="out-in">
-      <HeaderAccueil v-if="$route.name == 'Accueil'" class="HeaderAccueil" />
-      <Header v-if="$route.name != 'Accueil'" class="Header" />
+      <HeaderAccueil v-if="$route.name == 'index'" class="HeaderAccueil" />
+      <Header v-if="$route.name != 'index'" class="Header" />
     </transition>
     <section id="page">
       <transition name="affichePage" mode="out-in">

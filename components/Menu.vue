@@ -19,7 +19,7 @@
         <ul v-on:click="ouvrirMenu()" class="menu-navigation">
           <nuxt-link to="/">Accueil</nuxt-link>
           <nuxt-link to="/Services">Nos services</nuxt-link>
-          <nuxt-link to="/Medias">Médias</nuxt-link>
+          <nuxt-link to="/Médias">Médias</nuxt-link>
           <nuxt-link to="/Contact">Contact</nuxt-link>
         </ul>
       </div>
