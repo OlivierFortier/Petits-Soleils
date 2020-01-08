@@ -11,8 +11,8 @@
       </router-link>
     </div>
     <div v-on:click="ouvrirMenu()" class="menu-bouton">
-      <font-awesome-icon v-if="!active" icon="bars" />
-      <font-awesome-icon v-if="active" icon="window-close" />
+      <font-awesome-icon v-if="!active" :icon="['fas', 'bars']" />
+      <font-awesome-icon v-if="active" :icon="window - close" />
     </div>
     <transition name="ouvrir">
       <div v-if="active" class="navigation">
@@ -101,7 +101,7 @@ export default {
   z-index: 3;
   position: absolute;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-content: flex-end;
   right: -6%;
   top: -100%;

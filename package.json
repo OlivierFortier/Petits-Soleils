@@ -16,6 +16,7 @@
     "@nuxtjs/pwa": "^3.0.0-0",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.0.0",
+    "nuxt-fontawesome": "^0.4.0",
     "vue-carousel": "^0.18.0",
     "vue-sticky-directive": "0.0.10"
   },
