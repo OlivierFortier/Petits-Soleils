@@ -17,10 +17,10 @@
     <transition name="ouvrir">
       <div v-if="active" class="navigation">
         <ul v-on:click="ouvrirMenu()" class="menu-navigation">
-          <router-link to="/">Accueil</router-link>
-          <router-link to="/Services">Nos services</router-link>
-          <router-link to="/Medias">Médias</router-link>
-          <router-link to="/Contact">Contact</router-link>
+          <nuxt-link to="/">Accueil</nuxt-link>
+          <nuxt-link to="/Services">Nos services</nuxt-link>
+          <nuxt-link to="/Medias">Médias</nuxt-link>
+          <nuxt-link to="/Contact">Contact</nuxt-link>
         </ul>
       </div>
     </transition>
@@ -134,7 +134,7 @@ export default {
     margin-top: 15%;
     font-size: 2em;
     line-height: 1.5em;
-    .router-link-exact-active {
+    .nuxt-link-exact-active {
       &::before {
         content: '\261E ';
         color: white;
