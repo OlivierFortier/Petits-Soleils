@@ -28,18 +28,7 @@
           </a>
         </div>
       </div>
-      <h5>
-        <div>
-          Icons made by
-          <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
-            >Freepik</a
-          >
-          from
-          <a href="https://www.flaticon.com/" title="Flaticon"
-            >www.flaticon.com</a
-          >
-        </div>
-      </h5>
+      <h5></h5>
     </div>
   </div>
 </template>
@@ -74,7 +63,7 @@ export default {
     width: 80vw
     max-width: 500px
     display: grid
-    grid-template: 'cell1 cell2' auto 'cell3 cell3' / 1fr  1fr
+    grid-template: 'cell1 cell2' auto / 1fr
 
 .follow , .adresse
   h2
