@@ -37,10 +37,14 @@ export default {
     }
   },
   async created() {
-    const res = await axios.get(
-      'https://spreadsheets.google.com/feeds/list/1N9N3KHxUaEjfYTOJyf5YDmd88SpO9wQbqWt3jxsQK9k/od6/public/values?alt=json'
-    )
-    this.posts = res.data.feed.entry
+    try {
+      const res = await axios.get(
+        'https://spreadsheets.google.com/feeds/list/1N9N3KHxUaEjfYTOJyf5YDmd88SpO9wQbqWt3jxsQK9k/od6/public/values?alt=json'
+      )
+      this.posts = res.data.feed.entry
+    } catch (error) {
+      this.posts = error
+    }
   }
 }
 </script>
