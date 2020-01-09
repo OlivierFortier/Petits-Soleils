@@ -63,6 +63,26 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+  pwa: {
+    manifest: {
+      name: "Petits Soleils de la Pointe-de-l'île",
+      short_name: 'Petits Soleils',
+      lang: 'french',
+      scope: '/',
+      start_url: 'https://petits-soleils.netlify.com/',
+      display: 'fullscreen',
+      theme_color: '#D47C80',
+      description: "L'application web des Petits Soleils de la Pointe-de-l'île",
+      orientation: 'any',
+      background_color: '#D47C80',
+      related_applications: '',
+      prefer_related_applications: 'false'
+    },
+    meta: {
+      theme_color: '#D47C80',
+      mobileAppIOS: 'true'
+    }
+  },
   /*
    ** Build configuration
    */
