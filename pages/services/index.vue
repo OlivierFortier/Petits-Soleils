@@ -18,15 +18,30 @@
           'Inscription le 23 mars 2019 lors de notre journée porte-ouverte obligatoire. Vous devez venir accompagné de votre enfant.'
         ]"
       />
+
+      <Card-api v-bind:titreCard="'Api test'" v-bind:texteCard="posts" />
     </section>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
 import CardContenu from '~/components/CardContenu.vue'
+import CardApi from '~/components/CardApi.vue'
 export default {
   name: 'Services',
-  components: { CardContenu }
+  components: { CardContenu, CardApi },
+  data() {
+    return {
+      posts: []
+    }
+  },
+  async created() {
+    const res = await axios.get(
+      'https://spreadsheets.google.com/feeds/list/1N9N3KHxUaEjfYTOJyf5YDmd88SpO9wQbqWt3jxsQK9k/od6/public/values?alt=json'
+    )
+    this.posts = res.data.feed.entry
+  }
 }
 </script>
 
