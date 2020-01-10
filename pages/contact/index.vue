@@ -13,8 +13,6 @@
         <div class="g-maps">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5576.25326790115!2d-73.50853717260883!3d45.66835806641551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc8e17d2a88bb97%3A0x158743d2650de6ec!2s14115%20Rue%20Prince-Arthur%20bureau%20257%2C%20Pointe-aux-Trembles%2C%20QC%20H1A%201A8!5e0!3m2!1sfr!2sca!4v1575773000398!5m2!1sfr!2sca"
-            height
-            width
             frameborder="0"
             style="border:0;"
             allowfullscreen

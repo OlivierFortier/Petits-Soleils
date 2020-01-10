@@ -21,7 +21,7 @@
           'Jusqu\'à tout récemment, le camp de jour estival s\'adressant à cette clientèle était assuré par Loisirs Communautaires Le Relais du Bout qui l\'avait lui-même repris de l\'organisme Loisirs-Soleil en 2001.'
         ]"
       >
-        <router-link class="lien" to="/Medias"
+        <router-link class="lien" to="/Médias"
           >Découvrez l'ambiance</router-link
         >
       </card-contenu>
