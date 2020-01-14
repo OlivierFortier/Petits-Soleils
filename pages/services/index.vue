@@ -1,36 +1,27 @@
 <template>
   <div class="wrapper">
     <section class="contenu">
-      <CardContenu
+      <Card-api
         v-bind:titreCard="'Camps de jour'"
-        v-bind:texteCard="[
-          'Camp de jour adapté pour enfant de 6 à 17 ans vivant avec une déficience intellectuelle et trouble du spectre de l\'autisme. Nous offrons un ratio de 2 enfants pour une animatrice.',
-
-          'Inscription le 23 mars 2019 lors de notre journée porte-ouverte obligatoire. Vous devez venir accompagné de votre enfant.'
-        ]"
+        v-bind:texteCard="posts"
+        v-bind:camp="true"
       />
 
-      <CardContenu
+      <Card-api
         v-bind:titreCard="'Répits de jour'"
-        v-bind:texteCard="[
-          'Camp de jour adapté pour enfant de 6 à 17 ans vivant avec une déficience intellectuelle et trouble du spectre de l\'autisme. Nous offrons un ratio de 2 enfants pour une animatrice.',
-
-          'Inscription le 23 mars 2019 lors de notre journée porte-ouverte obligatoire. Vous devez venir accompagné de votre enfant.'
-        ]"
+        v-bind:texteCard="posts"
+        v-bind:camp="false"
       />
-
-      <Card-api v-bind:titreCard="'Api test'" v-bind:texteCard="posts" />
     </section>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-import CardContenu from '~/components/CardContenu.vue'
 import CardApi from '~/components/CardApi.vue'
 export default {
   name: 'Services',
-  components: { CardContenu, CardApi },
+  components: { CardApi },
   data() {
     return {
       posts: []

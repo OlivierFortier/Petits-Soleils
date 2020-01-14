@@ -19,9 +19,16 @@
         v-if="texteCard != null || ''"
         class="texte"
       >
-        <p v-for="texte in texteCard" :key="texte.gsx$id.$t">
-          {{ texte.gsx$contenu.$t }}
-        </p>
+        <div v-if="camp">
+          <p v-for="texte in texteCard" :key="texte.gsx$id.$t">
+            {{ texte.gsx$camps.$t }}
+          </p>
+        </div>
+        <div v-if="!camp">
+          <p v-for="texte in texteCard" :key="texte.gsx$id.$t">
+            {{ texte.gsx$répits.$t }}
+          </p>
+        </div>
       </div>
       <slot class="leLien"></slot>
     </div>
@@ -40,6 +47,10 @@ export default {
       type: Array,
       required: false,
       default: () => ['Erreur']
+    },
+    camp: {
+      type: Boolean,
+      default: true
     }
   }
 }
