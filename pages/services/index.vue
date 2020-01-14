@@ -11,7 +11,9 @@
         v-bind:titreCard="'Répits de jour'"
         v-bind:texteCard="posts"
         v-bind:camp="false"
-      />
+      >
+        <a class="lien" href="/pdf/repit.pdf" target="_blank">le formulaire</a>
+      </Card-api>
     </section>
   </div>
 </template>
