@@ -20,17 +20,36 @@
         class="texte"
       >
         <div v-if="camp">
-          <p v-for="texte in texteCard" :key="texte.gsx$id.$t">
-            {{ texte.gsx$camps.$t }}
-          </p>
+          <div v-for="texte in texteCard" :key="texte.gsx$id.$t">
+            <p>
+              {{ filtrerDesc(texte.gsx$camps.$t) }}
+            </p>
+            <a
+              v-if="filtrerLien(texte.gsx$camps.$t)"
+              v-bind:href="texte.gsx$camps.$t"
+              target="_blank"
+              class="lien"
+            >
+              Le formulaire
+            </a>
+          </div>
         </div>
         <div v-if="!camp">
-          <p v-for="texte in texteCard" :key="texte.gsx$id.$t">
-            {{ texte.gsx$répits.$t }}
-          </p>
+          <div v-for="texte in texteCard" :key="texte.gsx$id.$t">
+            <p>
+              {{ filtrerDesc(texte.gsx$répits.$t) }}
+            </p>
+            <a
+              v-if="filtrerLien(texte.gsx$répits.$t)"
+              v-bind:href="texte.gsx$répits.$t"
+              target="_blank"
+              class="lien"
+            >
+              Le formulaire
+            </a>
+          </div>
         </div>
       </div>
-      <slot class="leLien"></slot>
     </div>
   </div>
 </template>
@@ -51,6 +70,22 @@ export default {
     camp: {
       type: Boolean,
       default: true
+    }
+  },
+  methods: {
+    filtrerDesc(ligne) {
+      let ligneFinal
+      if (!ligne.includes('https')) {
+        ligneFinal = ligne
+      }
+      return ligneFinal
+    },
+    filtrerLien(lien) {
+      let lienFinal
+      if (lien.includes('https')) {
+        lienFinal = lien
+      }
+      return lienFinal
     }
   }
 }
@@ -79,9 +114,6 @@ export default {
 .rowContact
   flex-direction: row
   justify-content: space-between
-
-.leLien
-  width: 100%
 
 .titreCard
   text-shadow: 0px 4px 4px #401ADB

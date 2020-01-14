@@ -63,7 +63,7 @@ export default {
     width: 80vw
     max-width: 500px
     display: grid
-    grid-template: 'cell1 cell2' auto / 1fr
+    grid-template: 'cell1 cell2' auto / 1fr 1fr
 
 .follow , .adresse
   h2
