@@ -29,13 +29,18 @@ export default {
     }
   },
   async created() {
-    try {
-      const res = await axios.get(
-        'https://spreadsheets.google.com/feeds/list/1N9N3KHxUaEjfYTOJyf5YDmd88SpO9wQbqWt3jxsQK9k/od6/public/values?alt=json'
-      )
-      this.posts = res.data.feed.entry
-    } catch (error) {
-      this.posts = error
+    if (localStorage.getItem('posts')) {
+      this.posts = JSON.parse(localStorage.getItem('posts'))
+    } else {
+      try {
+        const res = await axios.get(
+          'https://spreadsheets.google.com/feeds/list/1N9N3KHxUaEjfYTOJyf5YDmd88SpO9wQbqWt3jxsQK9k/od6/public/values?alt=json'
+        )
+        localStorage.setItem('posts', JSON.stringify(res.data.feed.entry))
+        this.posts = res.data.feed.entry
+      } catch (error) {
+        this.posts = error
+      }
     }
   }
 }
